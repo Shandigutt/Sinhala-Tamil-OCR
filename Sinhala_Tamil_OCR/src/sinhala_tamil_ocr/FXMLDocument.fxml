@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1000.0" stylesheets="@root.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sinhala_tamil_ocr.FXMLDocumentController">
+    <children>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane prefHeight="60.0" styleClass="titleBar" VBox.vgrow="NEVER">
+               <children>
+                  <!--Button fx:id="loadImage" layoutX="39.0" layoutY="18.0" mnemonicParsing="false" onAction="#openImage" text="Load Image" AnchorPane.bottomAnchor="17.0" AnchorPane.leftAnchor="39.0" AnchorPane.topAnchor="18.0" /-->
+                  <Button fx:id="process" layoutX="917.0" layoutY="18.0" mnemonicParsing="false" text="Process" AnchorPane.bottomAnchor="17.0" AnchorPane.rightAnchor="27.0" AnchorPane.topAnchor="18.0" />
+                  <Button fx:id="loadImage" layoutX="29.0" layoutY="18.0" mnemonicParsing="false" text="Browse Image" AnchorPane.bottomAnchor="17.0" AnchorPane.leftAnchor="29.0" AnchorPane.topAnchor="18.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane styleClass="contentArea" VBox.vgrow="ALWAYS">
+               <children>
+                  <SplitPane fx:id="splitPane" dividerPositions="0.5" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <items>
+                      <AnchorPane fx:id="imageArea" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <children>
+                              <ScrollPane fx:id="imageScroll" fitToWidth="true" hbarPolicy="NEVER" layoutX="102.0" layoutY="98.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0">
+                                       <children>
+                                          <ImageView fx:id="imageView" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                       </children>
+                                    </AnchorPane>
+                                </content>
+                              </ScrollPane>
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <children>
+                              <TextArea fx:id="output" prefHeight="200.0" prefWidth="200.0" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+    </children>
+</AnchorPane>
